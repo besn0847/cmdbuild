@@ -6,11 +6,11 @@ volumes:
     cmdbuild-companion:
 
 services:
-    cmdbuild_db:
+    cmdbuild-db:
         build:
             context: ..
             dockerfile: src/Dockerfile.postgres
-        container_name: cmdbuild_db
+        container_name: cmdbuild-db
         volumes:
             - cmdbuild-db:/var/lib/postgresql
         ports:
@@ -22,17 +22,17 @@ services:
         mem_limit: 8000m
         mem_reservation: 2000m
 
-    cmdbuild_app:
+    cmdbuild-app:
         build:
             context: ..
             dockerfile: src/Dockerfile.tomcat
-        container_name: cmdbuild_app
+        container_name: cmdbuild-app
         links:
-           - cmdbuild_db
+           - cmdbuild-db
         depends_on:
-           - cmdbuild_db
+           - cmdbuild-db
         ports:
-           - 8090:8080 
+           - 8080:8080 
            - 8443:8443
         restart: always  
         volumes:
@@ -41,19 +41,19 @@ services:
             - POSTGRES_USER=postgres
             - POSTGRES_PASS=passw0rd
             - POSTGRES_PORT=5432
-            - POSTGRES_HOST=cmdbuild_db
+            - POSTGRES_HOST=cmdbuild-db
             - POSTGRES_DB=cmdbuild_3
             - JAVA_OPTS=-Xmx8000m -Xms2000m
         mem_limit: 8000m
         mem_reservation: 2000m
 
-    cmdbuild_companion:
+    cmdbuild-companion:
         image: jupyter/datascience-notebook
-        container_name: cmdbuild_companion
+        container_name: cmdbuild-companion
         links:
-           - cmdbuild_app
+           - cmdbuild-app
         depends_on:
-           - cmdbuild_app
+           - cmdbuild-app
         ports:
             - 8888:8888
         restart: always
