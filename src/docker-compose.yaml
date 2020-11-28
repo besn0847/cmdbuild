@@ -48,12 +48,12 @@ services:
 
     cmdbuild_companion:
         image: jupyter/datascience-notebook
-        container_name: cmdbuild_app
+        container_name: cmdbuild_companion
         links:
            - cmdbuild_app
            - cmdbuild_db
         ports:
-            - 10000:10000
+            - 8888:8888
         restart: always
         volumes:
             - cmdbuild-companion:/home/jovyan/work
