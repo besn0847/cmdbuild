@@ -52,7 +52,8 @@ services:
         container_name: cmdbuild_companion
         links:
            - cmdbuild_app
-           - cmdbuild_db
+        depends_on:
+           - cmdbuild_app
         ports:
             - 8888:8888
         restart: always
