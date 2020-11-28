@@ -32,6 +32,7 @@ services:
         depends_on:
            - cmdbuild_db
         ports:
+           - 8090:8080 
            - 8443:8443
         restart: always  
         volumes:
