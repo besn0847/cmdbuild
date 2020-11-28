@@ -1,0 +1,63 @@
+version: "2.2"
+
+volumes:
+    cmdbuild-db:
+    cmdbuild-tomcat:
+    cmdbuild-companion:
+
+services:
+    cmdbuild_db:
+        build:
+            context: ..
+            dockerfile: src/Dockerfile.postgres
+        container_name: cmdbuild_db
+        volumes:
+            - cmdbuild-db:/var/lib/postgresql
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASS=passw0rd
+        restart: always
+        mem_limit: 8000m
+        mem_reservation: 2000m
+
+    cmdbuild_app:
+        build:
+            context: ..
+            dockerfile: src/Dockerfile.tomcat
+        container_name: cmdbuild_app
+        links:
+           - cmdbuild_db
+        depends_on:
+           - cmdbuild_db
+        ports:
+           - 8443:8443
+        restart: always  
+        volumes:
+            - cmdbuild-tomcat:/usr/local/tomcat
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASS=passw0rd
+            - POSTGRES_PORT=5432
+            - POSTGRES_HOST=cmdbuild_db
+            - POSTGRES_DB=cmdbuild_3
+            - JAVA_OPTS=-Xmx8000m -Xms2000m
+        mem_limit: 8000m
+        mem_reservation: 2000m
+
+    cmdbuild_companion:
+        image: jupyter/datascience-notebook
+        container_name: cmdbuild_app
+        links:
+           - cmdbuild_app
+           - cmdbuild_db
+        ports:
+            - 10000:10000
+        restart: always
+        volumes:
+            - cmdbuild-companion:/home/jovyan/work
+        environment:
+            - JUPYTER_ENABLE_LAB=yes
+        mem_limit: 4000m
+        mem_reservation: 1000m
