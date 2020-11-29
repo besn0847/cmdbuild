@@ -1,0 +1,192 @@
+- name : owner-asset
+  description: "Owner - Asset"
+  source: owner
+  destination: asset
+  cardinality: 1:N
+  descriptionDirect: possède
+  descriptionInverse: est la propriété de
+  active: true
+- name : maintainedelement-asset
+  description: "MaintainedElement - Asset"
+  source: maintainedelement
+  destination: asset
+  cardinality: N:1
+  descriptionDirect: compose
+  descriptionInverse: est composé de
+  active: true
+- name : application-asset
+  description: "Application - Asset"
+  source: application
+  destination: asset
+  cardinality: N:N
+  descriptionDirect: est impactée par
+  descriptionInverse: impacte
+  active: true
+- name : projectplan-asset
+  description: "ProjectPlan - Asset"
+  source: projectplan
+  destination: asset
+  cardinality: N:N
+  descriptionDirect: déploie
+  descriptionInverse: est déployé par
+  active: true
+- name : support-asset
+  description: "Support - Asset"
+  source: support
+  destination: asset
+  cardinality: 1:N
+  descriptionDirect: supporte
+  descriptionInverse: est supporté par
+  active: true
+- name : maintenancecontract-asset
+  description: "MaintenanceContract - Asset"
+  source: maintenancecontract
+  destination: asset
+  cardinality: N:N
+  descriptionDirect: maintient
+  descriptionInverse: est maintenu par
+  active: true
+- name : recommendation-asset
+  description: "Recommendation - Asset"
+  source: recommendation
+  destination: asset
+  cardinality: N:N
+  descriptionDirect: recommande de
+  descriptionInverse: est recommandé par
+  active: true
+- name : projectplan-application
+  description: "ProjectPlan - Application"
+  source: projectplan
+  destination: application
+  cardinality: N:1
+  descriptionDirect: conçoit
+  descriptionInverse: est conçue par
+  active: true
+- name : exception-support
+  description: "Exception - Support"
+  source: exception
+  destination: support
+  cardinality: N:1
+  descriptionDirect: permet de
+  descriptionInverse: est permis par
+  active: true
+- name : maintenancecontract-support
+  description: "MaintenanceContract - Support"
+  source: maintenancecontract
+  destination: support
+  cardinality: N:1
+  descriptionDirect: permet de
+  descriptionInverse: est permis par
+  active: true
+- name : maintenancecontract-vendor
+  description: "MaintenanceContract - Vendor"
+  source: maintenancecontract
+  destination: vendor
+  cardinality: N:1
+  descriptionDirect: est géré par
+  descriptionInverse: gère
+  active: true
+- name : exception-vendor
+  description: "Exception - Vendor"
+  source: exception
+  destination: vendor
+  cardinality: N:1
+  descriptionDirect: est formulée par
+  descriptionInverse: formule
+  active: true
+- name : exception-recommendation
+  description: "Exception - Recommendation"
+  source: exception
+  destination: recommendation
+  cardinality: N:1
+  descriptionDirect: est associée à
+  descriptionInverse: associe
+  active: true
+- name : vendor-recommendation
+  description: "Vendor - Recommendation"
+  source: vendor
+  destination: recommendation
+  cardinality: 1:N
+  descriptionDirect: formule
+  descriptionInverse: est formulée par
+  active: true
+- name : maintenanceplan-recommendation
+  description: "MaintenancePlan - Recommendation"
+  source: maintenanceplan
+  destination: recommendation
+  cardinality: 1:N
+  descriptionDirect: contient
+  descriptionInverse: est contenu dans
+  active: true
+- name : maintenanceplan-asset
+  description: "MaintenancePlan - Asset"
+  source: maintenanceplan
+  destination: asset
+  cardinality: 1:N
+  descriptionDirect: s'applique à
+  descriptionInverse: est maintenu par
+  active: true
+- name : maintenanceplan-roadmap
+  description: "MaintenancePlan - Roadmap"
+  source: maintenanceplan
+  destination: roadmap
+  cardinality: N:1
+  descriptionDirect: est contenu dans
+  descriptionInverse: contient
+  active: true
+- name : maintenanceplan-activity
+  description: "MaintenancePlan - Activity"
+  source: maintenanceplan
+  destination: activity
+  cardinality: 1:N
+  descriptionDirect: contient
+  descriptionInverse: est contenu dans
+  active: true
+- name : skill-activity
+  description: "Skill - Activity"
+  source: skill
+  destination: activity
+  cardinality: N:1
+  descriptionDirect: contribue à
+  descriptionInverse: nécessite
+  active: true
+- name : activity-intervention
+  description: "Activity - Intervention"
+  source: activity
+  destination: intervention
+  cardinality: 1:N
+  descriptionDirect: réalise
+  descriptionInverse: est liée à
+  active: true
+- name : risk-intervention
+  description: "Risk - Intervention"
+  source: risk
+  destination: intervention
+  cardinality: N:1
+  descriptionDirect: impacte
+  descriptionInverse: est impactée par
+  active: true
+- name : risk-vulnerability
+  description: "Risk - Vulnerability"
+  source: risk
+  destination: vulnerability
+  cardinality: N:N
+  descriptionDirect: est créé par
+  descriptionInverse: engendre
+  active: true
+- name : maintainedelement-vulnerability
+  description: "MaintainedElement - Vulnerability"
+  source: maintainedelement
+  destination: vulnerability
+  cardinality: N:N
+  descriptionDirect: est impacté par
+  descriptionInverse: impacte
+  active: true
+- name : maintainedelement-intervention
+  description: "MaintainedElement - Intervention"
+  source: maintainedelement
+  destination: intervention
+  cardinality: 1:N
+  descriptionDirect: est mis à jour par
+  descriptionInverse: met à jour
+  active: true

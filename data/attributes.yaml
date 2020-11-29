@@ -1,0 +1,1685 @@
+- class: owner
+  attributes:
+  - name: ownername
+    description: Nom de la personne physique
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ownerteam
+    description: Equipe
+    type: string
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ownerdomain
+    description: Domaine
+    type: string
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ownermail
+    description: Email
+    type: string
+    maxLength: 25
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ownerdate
+    description: Date de prise en charge
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: asset
+  attributes:
+  - name: assetname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetdescription
+    description: Description détaillée
+    type: string
+    maxLength: 30
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetserial
+    description: Numéro de série
+    type: string
+    maxLength: 15
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetstatus
+    description: Statut
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetlocation
+    description: Localisation
+    type: string
+    maxLength: 15
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetvendor
+    description: Fournisseur
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetzone
+    description: Zoner réseau
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assettype
+    description: Type
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetmodel
+    description: Modèle
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: flase
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetversion
+    description: Version déployée
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetpurchase
+    description: Date d'achat
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetgolive
+    description: Date de mise en production
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetupdate
+    description: Date de dernière mise à jour
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetsupport
+    description: Date de fin de support
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: assetextension
+    description: Extension de support en cours
+    type: string
+    maxLength: 3
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: maintainedelement
+  attributes:
+  - name: mename
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: mestatus
+    description: Status
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: metype
+    description: Type
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: mesubtype
+    description: Sous-type
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: mecurrent
+    description: Version courante
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: merecommended
+    description: Version recommandée
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: meupdate
+    description: Date de dernière mise à jour
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: mesupport
+    description: Date de fin de support
+    type: date
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: mepacthes
+    description: Patches requis
+    type: text
+    maxLength: 100
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: projectplan
+  attributes:
+  - name: ppname
+    description: Nom du projet
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ppcode
+    description: Code projet
+    type: string
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ppstatus
+    description: Statut
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ppresponsable
+    description: Nom du responsable
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ppmail
+    description: Mail du responsable
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: ppteam
+    description: Equipe du responsable
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: application
+  attributes:
+  - name: appname
+    description: Nom de l'application
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: appcode
+    description: Code ROBIN
+    type: string
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: appstatus
+    description: Statut
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: appproprietaire
+    description: Nom du propriétaire
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: appmail
+    description: Mail du propriétaire
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: appteam
+    description: Equipe du propriétaire
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: vulnerability
+  attributes:
+  - name: vulname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulcve
+    description: Identifiant CVE
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulcriticity
+    description: Criticité
+    type: integer
+    maxLength: 2
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulurgency
+    description: Urgence
+    type: integer
+    maxLength: 2
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulimpact
+    description: Impact
+    type: integer
+    maxLength: 2
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulchannel
+    description: Canal de remontée
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vuldiscovery
+    description: Date de découverte
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: vulresolution
+    description: Date de résolution attendue
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: risk
+  attributes:
+  - name: riskname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskimpact
+    description: Impact
+    type: integer
+    maxLength: 2
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskprobability
+    description: Probability
+    type: integer
+    maxLength: 2
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskdescription
+    description: Description détaillée
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskcontact
+    description: Contact gestion de risques
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskmitigation
+    description: Description de la mitigation
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: riskdeadline
+    description: Echéance de la mise en oeuvre
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: vendor
+  attributes:
+  - name: vendorname
+    description: Nom du fournisseur
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false    
+  - name: vendorsalescontact
+    description: Nom du contact commercial
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false   
+  - name: vendorsalesemail
+    description: Email du contact commercial
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false   
+  - name: vendortechcontact
+    description: Nom du contact technique
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false   
+  - name: vendortechemail
+    description: Email du contact technique
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: vendorinternalemail
+    description: Email du contact interne
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false   
+  - name: vendorlastreview
+    description: Date de la dernière revue de maintenance
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: vendornextreview
+    description: Date de la prochaine revue de maintenance
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+- class: exception
+  attributes:
+  - name: exceptionname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false    
+  - name: exceptionstatus
+    description: Statut
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false  
+  - name: exceptiondescription
+    description: Description détaillée
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: exceptionvendorcontact
+    description: Nom du contact fournisseur
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: exceptionvendoremail
+    description: Email du contact fournisseur
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: exceptionstartdate
+    description: Date d'effet
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: exceptionenddate
+    description: Date de fin d'exception
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false   
+- class: support
+  attributes:
+  - name: supporttype
+    description: Type de support
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supportstatus
+    description: Status
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supportschedules
+    description: Plage horaire
+    type: string
+    maxLength: 15
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supporteligibility
+    description: Conditions d'éligibilité
+    type: text
+    maxLength: 20
+    showInGrid: false
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supportversions
+    description: Versions supportées
+    type: string
+    maxLength: 20
+    showInGrid: false
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supportemail
+    description: Email de contact
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: supportpremium
+    description: Support premium
+    type: boolean
+    maxLength: 1
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+- class: maintenancecontract
+  attributes:
+  - name: contractname
+    description: Nom du contrat
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractstatus
+    description: Statut
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractlength
+    description: Durée de couverture (en mois)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractstartdate
+    description: Date de début
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractrenewdate
+    description: Date de renouvellement
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractenddate
+    description: Date de fin
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractdescription
+    description: Description du périmètre
+    type: text
+    maxLength: 50
+    showInGrid: false
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: contractemail
+    description: Email du responsable interne
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+- class: recommendation
+  attributes:
+  - name: recoid
+    description: Identifiant
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: recosummary
+    description: Résumé
+    type: length
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: recodetails
+    description: Description détaillée
+    type: text
+    maxLength: 50
+    showInGrid: false
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: recoconditions
+    description: Conditions d'application
+    type: text
+    maxLength: 50
+    showInGrid: false
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: recoexception
+    description: Exception de support
+    type: boolean
+    maxLength: 1
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: recostartdate
+    description: Date de formulation
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: recorevisiondate
+    description: Date de révision
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: recoenddate
+    description: Date d'échéance
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+- class: maintenanceplan
+  attributes:
+  - name: planname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planvendor
+    description: Fournisseur
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: plandevice
+    description: Type d'équipement
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planteam
+    description: Equipe interne en charge
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planstartdate
+    description: Date de création
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planrevisiondate
+    description: Date de révision
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planenddate
+    description: Date d'échéance
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: planextension
+    description: Extension en cours
+    type: boolean
+    maxLength: 1
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+- class: roadmap
+  attributes:
+  - name: roadmapname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: roadmapdomain
+    description: Domaine en charge
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: roadmapstartdate
+    description: Date de création
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: roadmaprevisiondate
+    description: Date de révision
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: roadmapenddate
+    description: Date d'échéance
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: roadmapestimated
+    description: Charges estimées (JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: roadmapdelivered
+    description: Charges réalisées (JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: intervention
+  attributes:
+  - name: intertype
+    description: Type d'intervention
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: interteam
+    description: Equipe en charge
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: intercontact
+    description: Contact principal
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: interdescription
+    description: Description détaillée
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: intertargetdate
+    description: Date prévue
+    type: date
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: interelapsetime
+    description: Durée prévue (en jours)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: interestimates
+    description: Charges estimées (en JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: interdelivered
+    description: Charges réalisées (en JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+- class: activity
+  attributes:
+  - name: activityname
+    description: Nom
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
+  - name: activitydescription
+    description: Description détaillée
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false  
+  - name: activityowner
+    description: Propriétaire
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false 
+  - name: activityteam
+    description: Equipe responsable
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: activityduration
+    description: Durée de réalisation (en jours)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: activitydelivery
+    description: Charges de réalisation (en JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: activityconditions
+    description: Conditions de réalisation
+    type: text
+    maxLength: 50
+    showInGrid: true
+    showInReducedGrid: false
+    unique: false
+    mandatory: false
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false  
+- class: skill
+  attributes:
+  - name: skilltype
+    description: Type de compétence
+    type: string
+    maxLength: 20
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: skillteam
+    description: Equipe avec la compétence
+    type: string
+    maxLength: 10
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false
+  - name: skillworkload
+    description: Charges estimées (en JH)
+    type: integer
+    maxLength: 5
+    showInGrid: true
+    showInReducedGrid: true
+    unique: false
+    mandatory: true
+    active: true
+    mode: write
+    writable: true
+    immutable: false
+    hidden: false     
