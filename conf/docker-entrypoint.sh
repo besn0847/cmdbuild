@@ -26,8 +26,10 @@ done
     echo "DB was initiliazed. Use dbconfig recreate or dbconfig drop"
 }
 
-#echo "Change user to tomcat"
-#su tomcat
+echo "RUN catalina"
+#exec $CATALINA_HOME/bin/catalina.sh run
+$CATALINA_HOME/bin/catalina.sh start
 
-#echo "RUN catalina"
-exec $CATALINA_HOME/bin/catalina.sh run
+echo "Start tailing logfile"
+tail -f /usr/local/tomcat/logs/catalina.out
+
