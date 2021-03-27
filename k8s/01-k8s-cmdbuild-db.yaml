@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cmdbuild-db-claim
+  namespace: cmdbuild
+  annotations:
+    volume.beta.kubernetes.io/storage-class: px-db 
+  labels:
+    app: cmdbuild
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cmdbuild
+  name: cmdbuild-db
+  namespace: cmdbuild
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: cmdbuild-db
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        deployment: cmdbuild-db
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: cmdbuild_db3
+        - name: POSTGRES_HOST
+          value: cmdbuild-db
+        - name: POSTGRES_PASS
+          value: passw0rd
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_USER
+          value: postgres
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
+        image: 'docker.io/besn0847/cmdbuild-3.3:db'
+        name: cmdbuild-db
+        ports:
+        - containerPort: 5432
+          protocol: TCP
+        resources: {}
+        volumeMounts:
+          - name: cmdbuild-db-data
+            mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: cmdbuild-db-data
+          persistentVolumeClaim:
+            claimName: cmdbuild-db-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cmdbuild
+  name: cmdbuild-db
+  namespace: cmdbuild
+spec:
+  ports:
+  - name: 5432-tcp
+    port: 5432
+    protocol: TCP
+    targetPort: 5432
+  selector:
+    deployment: cmdbuild-db
+

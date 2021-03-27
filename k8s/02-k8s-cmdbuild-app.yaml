@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cmdbuild
+  name: cmdbuild-app
+  namespace: cmdbuild
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: cmdbuild-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        deployment: cmdbuild-app
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: cmdbuild_3
+        - name: POSTGRES_HOST
+          value: cmdbuild-db
+        - name: POSTGRES_PASS
+          value: passw0rd
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_USER
+          value: postgres
+        - name: JAVA_OPTS
+          value: -Xmx8000m -Xms2000m
+        image: 'docker.io/besn0847/cmdbuild-3.3:app'
+        name: cmdbuild-app
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        - containerPort: 8443
+          protocol: TCP
+        resources:
+          requests:
+            memory: "8Gi"
+          limits:
+            memory: "8Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cmdbuild
+  name: cmdbuild-app
+  namespace: cmdbuild
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  - name: 8443-tcp
+    port: 8443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    deployment: cmdbuild-app
+---
+
